@@ -1,0 +1,1 @@
+export {default as MultipleCustomHooks} from './MultipleCustomHooks'

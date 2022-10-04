@@ -1,27 +1,15 @@
 import React,{useState,useEffect} from 'react'
-
+import useForm from '../hooks/useForm'
 
 const SimpleFormWithCustomHook = () => {
-  const [formState, setFormState] = useState({
+  //Destructuramos userName,email,password
+  const {formState, onChangeInput,onResetForm, userName,email,password} = useForm( {
     userName: '',
     email: '',
     password:''
-  })
+  });
 
 
-  const onChangeInput = (e) =>{
-    const {name,value} = e.target;
-
-
-    setFormState({
-      ...formState,
-      [name]:value
-    });
-  }
-
-  useEffect( () => {
-    //
-  },[formState.email]);
 
 
   return (
@@ -58,7 +46,21 @@ const SimpleFormWithCustomHook = () => {
             value={formState.password}
             onChange={onChangeInput}
             />
-        </div>
+
+
+
+          <div className="d-grid mt-4">
+            <button 
+              className="btn btn-lg btn-primary" 
+              type="button"
+              onClick={onResetForm}
+              >Borrar
+            </button>
+          </div>
+
+
+
+        </div> {/* Fin Row */}
       </div>
     </>
   )
