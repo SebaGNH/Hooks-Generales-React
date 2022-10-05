@@ -21,7 +21,7 @@ const App = () => {
             {/* <SimpleFormWithCustomHook /> */}
           </div>
 
-          <div className="">
+          <div className="col-md-12">
             <MultipleCustomHooks />
           </div>
 
