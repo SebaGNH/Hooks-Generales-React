@@ -7,8 +7,8 @@ const useCounter = (initialValue = 5) => {
   const incrementar = (value = 1) => {
     setCounter(counter + value);
   }
-  const decrementar = (value = 1) => {
-    if (counter <=0) return;
+  const decrementar = (value = 1, minimo = 0) => {
+    if (counter <= minimo) return;
 
     setCounter(counter - value);
   }
