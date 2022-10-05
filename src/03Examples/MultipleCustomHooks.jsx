@@ -1,18 +1,14 @@
 import React,{useState,useEffect} from 'react'
 import useFetch from '../hooks/useFetch';
+import useCounter from '../hooks/useCounter';
 
-const url = `https://breakingbadapi.com/api/quotes/1`;
 
 const MultipleCustomHooks = () => {
-
+  const { counter, incrementar, decrementar, resetear } = useCounter(1);
+  const url = `https://breakingbadapi.com/api/quotes/${counter}`;
   const {data, isLoading,hasError} = useFetch(url);
-
   const {author,quote}  = !!data && data[0];
   
-//console.log(data)
-//console.log(isLoading)
- /*  console.log(data) */
-
 
   return (
     <>
@@ -29,6 +25,14 @@ const MultipleCustomHooks = () => {
           <footer className="blockquote-footer">{author}</footer>
         </blockquote>
       }
+
+      <button 
+        className="btn btn-primary"  
+        onClick={()=>incrementar()}
+        disabled={isLoading}
+        >Next Quote</button> 
+      <button className="btn btn-primary" onClick={()=>resetear()}>Reset Quote</button> 
+      <button className="btn btn-primary" onClick={()=>decrementar()}>Decrement Quote</button> 
     </>
   )
 }
