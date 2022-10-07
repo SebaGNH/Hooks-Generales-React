@@ -5,7 +5,12 @@ import { SimpleForm, SimpleFormWithCustomHook } from './02useEffect'
 import {MultipleCustomHooks} from './03Examples';
 import {FocusScreen} from './04useRef'
 import {Layout} from './05useLayoutEffect'
-import {Memorize} from './06memos'
+import {Memorize,MemoHook,CallBackHook} from './06memos'
+import { Padre } from './07tarememo/Padre';
+import {TodoApp} from './08_useReducer';
+
+
+
 
 const App = () => {
   return (
@@ -38,8 +43,16 @@ const App = () => {
             {/* <Layout /> */}
           </div>
 
+          <div className="col-md-12">
+            {/* <Memorize /> */}
+            {/* <MemoHook /> */}
+            {/* <CallBackHook /> */}
+            {/* <Padre /> */}
+          </div>
+
           <div className="col-md-12 bg-secondary rounded p-3">
-            <Memorize />
+            {/* <IntroReducer /> */}
+            <TodoApp />
           </div>
 
 
