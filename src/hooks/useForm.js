@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 
+//No olvidar poner el name en el input
 const useForm = (initialForm = {}) => {
   const [formState, setFormState] = useState(initialForm)
 
