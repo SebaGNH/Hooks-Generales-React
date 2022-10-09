@@ -8,6 +8,7 @@ import {Layout} from './05useLayoutEffect'
 import {Memorize,MemoHook,CallBackHook} from './06memos'
 import { Padre } from './07tarememo/Padre';
 import {TodoApp} from './08_useReducer';
+import {AppContext} from './09_useContext'
 
 
 
@@ -50,9 +51,14 @@ const App = () => {
             {/* <Padre /> */}
           </div>
 
+          <div className="col-md-12">
+            {/* <IntroReducer /> */}
+            {/* <TodoApp /> */}
+          </div>
+
           <div className="col-md-12 bg-secondary rounded p-3">
             {/* <IntroReducer /> */}
-            <TodoApp />
+            <AppContext />
           </div>
 
 
