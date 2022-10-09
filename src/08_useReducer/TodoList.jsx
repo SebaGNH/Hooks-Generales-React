@@ -1,7 +1,7 @@
 import React from 'react'
 import {TodoItem} from './'
 
-const TodoList = ({estados = []}) => {
+const TodoList = ({estados = [],onDeleteTodo,onToggleTodo}) => {
   return (
     <>
         <ul className="list-group">
@@ -10,6 +10,8 @@ const TodoList = ({estados = []}) => {
               <TodoItem 
                 key={estado.id}
                 estado={estado}
+                onDeleteTodo={onDeleteTodo}
+                onToggleTodo={onToggleTodo}
               />
             ))
           }
