@@ -1,10 +1,11 @@
 import React from 'react'
 import {Routes,Route,Navigate,Link,NavLink} from 'react-router-dom'
 import {HomePage, AboutPage,LoginPage} from './'
+import { UserProvider } from './context/UserProvider'
 
 const AppContext = () => {
   return (
-    <>
+    <UserProvider>
       <h2>AppContext</h2>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark rounded-3">
         <Link className="navbar-brand" to="/">useContext</Link>
@@ -39,7 +40,7 @@ const AppContext = () => {
         {/* <Route path='/*' element={<HomePage />}/> */}
         <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
-    </>
+    </UserProvider>
   )
 }
 
