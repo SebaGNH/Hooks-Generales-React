@@ -9,6 +9,7 @@ import {Memorize,MemoHook,CallBackHook} from './06memos'
 import { Padre } from './07tarememo/Padre';
 import {TodoApp} from './08_useReducer';
 import {AppContext} from './09_useContext'
+import AppRedux from './18_Redux_Toolkit/AppRedux';
 
 
 
@@ -20,7 +21,7 @@ const App = () => {
         <div className="row">
 
           <div className="col-md-12">    
-            {/* <Counter01 /> */}
+           {/*  <Counter01 /> */}
             {/* <Counter02 /> */}
             {/* <Counter03WithCustumHook /> */}
           </div>
@@ -36,7 +37,7 @@ const App = () => {
 
           
           <div className="col-md-12">
-            {/* <FocusScreen /> */}
+           {/*  <FocusScreen /> */}
           </div>
 
           
@@ -45,10 +46,10 @@ const App = () => {
           </div>
 
           <div className="col-md-12">
-            {/* <Memorize /> */}
+           {/*  <Memorize /> */}
             {/* <MemoHook /> */}
-            {/* <CallBackHook /> */}
-            {/* <Padre /> */}
+           {/*  <CallBackHook /> */}
+           {/*  <Padre /> */}
           </div>
 
           <div className="col-md-12">
@@ -58,9 +59,12 @@ const App = () => {
 
           <div className="col-md-12 bg-secondary rounded p-3">
             {/* <IntroReducer /> */}
-            <AppContext />
+            {/* <AppContext /> */}
           </div>
 
+          <div className="col-md-12">
+            <AppRedux/>
+          </div>
 
 
         </div>
